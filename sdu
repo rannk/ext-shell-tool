@@ -1,0 +1,14 @@
+#!/bin/bash  
+str=`ls`;
+i=1  
+while((1==1))  
+do  
+        split=`echo $str |cut -d " " -f$i`  
+        if [ "$split" != "" ]  
+        then  
+                ((i++))  
+                du -sh $split  
+        else  
+                break  
+        fi  
+done
